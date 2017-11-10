@@ -1,0 +1,22 @@
+{
+  "extends": "google",
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "jsx": true
+    },
+    "sourceType": "module"
+  },
+  "rules": {
+    "max-len": [1, 140, 2, {"ignoreUrls": true}],
+    "camelcase": "off",
+    "arrow-parens": "off",
+    "require-jsdoc": "off"
+  }
+}
