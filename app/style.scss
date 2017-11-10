@@ -1,0 +1,20 @@
+.app--movie-search-form {
+  margin-top: 50px;
+
+  &-alert {
+    &.alert-invisible {
+      display: none;
+    }
+    &.alert-visible {
+      display: block;
+    }
+  }
+}
+
+.app--movies-list {
+  margin-top: 100px;
+
+  .card {
+    margin-bottom: 20px;
+  }
+}
