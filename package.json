@@ -1,7 +1,7 @@
 {
   "name": "movie-db-test-app",
   "version": "1.0.0",
-  "description": "A test app for fetching list from move db",
+  "description": "A test app for fetching list from movie db",
   "main": "webpack.config.js",
   "scripts": {
     "build": "npm run lint && webpack",

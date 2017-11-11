@@ -1,0 +1,12 @@
+.app--movie-search-form {
+  margin-top: 50px;
+
+  &-alert {
+    &.alert-invisible {
+      display: none;
+    }
+    &.alert-visible {
+      display: block;
+    }
+  }
+}

@@ -1,9 +1,10 @@
 import Http from './../http/http';
 import {populateListOfMovies} from './../movie-cards/movie-cards';
 
-const getSearchInputValue = () => {
-  const searchInput = document.getElementById('movieSearchInput');
+const alertElement = document.querySelector('.app--movie-search-form-alert');
+const searchInput = document.getElementById('movieSearchInput');
 
+const getSearchInputValue = () => {
   return searchInput.value;
 };
 
@@ -19,11 +20,18 @@ const fetchMoviesListByProvidedString = searchInputValue => {
   return http.get(url);
 };
 
+const hideAlert = () => {
+  alertElement.classList.remove('alert-visible');
+};
+
+const showAlert = () => {
+  alertElement.classList.add('alert-visible');
+};
+
 export const onMovieSearchFormSubmit = event => {
   event.preventDefault();
+  hideAlert();
   const searchInputValue = getSearchInputValue();
-  const alertElement = document.querySelector('.app--movie-search-form-alert');
-  alertElement.classList.remove('alert-visible');
 
   if (!searchInputValue) {
     return;
@@ -36,6 +44,6 @@ export const onMovieSearchFormSubmit = event => {
         populateListOfMovies(moviesList);
       })
       .catch(() => {
-        alertElement.classList.add('alert-visible');
+        showAlert();
       });
 };
